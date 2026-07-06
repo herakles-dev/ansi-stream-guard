@@ -1,0 +1,51 @@
+{
+  "name": "ansi-stream-guard",
+  "version": "0.1.0",
+  "description": "Hold back incomplete ANSI escape sequences across chunk boundaries and strip alt-screen toggles, so tmux / Claude Code / Ink output renders faithfully in a browser terminal.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "ansi",
+    "escape-sequences",
+    "vt100",
+    "csi",
+    "osc",
+    "terminal",
+    "xterm",
+    "tmux",
+    "pty",
+    "stream",
+    "claude-code"
+  ],
+  "license": "MIT",
+  "author": "herakles-dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/herakles-dev/ansi-stream-guard.git"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "vitest": "^4.0.15"
+  }
+}
