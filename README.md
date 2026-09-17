@@ -9,8 +9,18 @@ It does exactly two things, and nothing else:
 
 Pure, deterministic, no timers, no DOM, no dependencies. ~130 lines.
 
+Not on npm yet — install straight from GitHub, or vendor the file:
+
 ```bash
-npm install ansi-stream-guard
+npm install github:herakles-dev/ansi-stream-guard
+```
+
+`npm install` builds it on the way in (the `prepare` script runs `tsc`), so `dist/` doesn't need to be committed.
+
+Or skip the dependency entirely — it's one file with no imports:
+
+```bash
+curl -o ansiStreamGuard.ts https://raw.githubusercontent.com/herakles-dev/ansi-stream-guard/main/src/ansiStreamGuard.ts
 ```
 
 ```ts
